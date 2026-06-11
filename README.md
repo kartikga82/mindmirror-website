@@ -1,8 +1,8 @@
-# Mind Mirror Website
-
-This version includes the Mind Mirror logo.
-
-Upload all three files to GitHub:
-- index.html
-- styles.css
-- mind-mirror-logo.jpeg
+Mind Mirror Website Version 2
+AI Mental Wellness Platform landing page.
+Upload/replace these files in GitHub:
+index.html
+styles.css
+mind-mirror-logo.jpeg
+README.md
+Netlify will auto-deploy after the GitHub commit.
