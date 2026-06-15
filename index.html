@@ -70,10 +70,11 @@
       <p class="eyebrow">Early access</p>
       <h2>Be part of the first Mind Mirror community.</h2>
       <p>Join the early access list for updates, pilot opportunities, and launch announcements.</p>
-      <form action="mailto:hello@mindmirror.ca" method="post" enctype="text/plain">
-        <input type="email" name="email" placeholder="Your email address" required />
-        <button type="submit">Join early access</button>
-      </form>
+      <form name="early-access" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="early-access" />
+  <input type="email" name="email" placeholder="Your email address" required />
+  <button type="submit">Join early access</button>
+</form>
       <small>For partnerships, pilots, or employer wellness programs, contact hello@mindmirror.ca.</small>
     </section>
   </main>
