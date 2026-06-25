@@ -75,3 +75,39 @@
   color: #0f766e;
   font-size: 0.95rem;
 }
+.wellbeing-ticker {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  padding: 12px 0;
+  position: relative;
+}
+
+.ticker-track {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track span {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  font-weight: 750;
+  color: var(--teal);
+  letter-spacing: 0.02em;
+  animation: ticker-left-to-right 18s linear infinite;
+}
+
+@keyframes ticker-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
