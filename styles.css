@@ -10,3 +10,36 @@
   font-size: 0.95rem;
   color: #475569;
 }
+.thank-you-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.thank-you-card {
+  max-width: 760px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 118, 110, 0.15);
+  border-radius: 28px;
+  padding: 56px 40px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.thank-you-card h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+.thank-you-card p {
+  max-width: 620px;
+  margin: 0 auto 18px;
+}
+
+.thank-you-card .button {
+  margin-top: 18px;
+}
