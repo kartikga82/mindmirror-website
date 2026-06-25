@@ -43,3 +43,35 @@
 .thank-you-card .button {
   margin-top: 18px;
 }
+#early-access-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  max-width: 640px;
+  margin: 30px auto 14px;
+}
+
+#early-access-email {
+  min-width: 320px;
+  max-width: 420px;
+  flex: 1 1 320px;
+}
+
+#early-access-form button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  min-width: 190px;
+  padding: 16px 28px;
+}
+
+#duplicate-message {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 540px;
+  margin: 10px auto 0;
+  text-align: center;
+  color: #0f766e;
+  font-size: 0.95rem;
+}
