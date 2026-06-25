@@ -24,6 +24,14 @@
     </nav>
   </header>
 
+  <div class="wellbeing-ticker" aria-label="Daily wellbeing message">
+    <div class="ticker-track">
+      <span id="dailyTickerText">
+        Today’s reminder: pause, breathe, and check in with yourself.
+      </span>
+    </div>
+  </div>
+
   <main>
     <section class="hero">
       <div>
@@ -188,9 +196,10 @@
       <p class="eyebrow">Early access</p>
       <h2>Be part of the first Mind Mirror community.</h2>
       <p>Join the early access list for updates, pilot opportunities, and launch announcements.</p>
-<p class="pilot-note">
-  Mind Mirror is currently in early development. Join the early access list to follow pilot updates and help shape the platform.
-</p>
+
+      <p class="pilot-note">
+        Mind Mirror is currently in early development. Join the early access list to follow pilot updates and help shape the platform.
+      </p>
       
       <form
         id="early-access-form"
@@ -260,5 +269,160 @@
       );
     });
   </script>
+
+  <script>
+    const dailyWellbeingMessages = [
+      "Today’s reminder: pause, breathe, and check in with yourself.",
+      "You do not have to solve everything today. One gentle step is enough.",
+      "Your feelings are information, not weakness.",
+      "Rest is not a reward. It is part of wellbeing.",
+      "A small pause can protect your peace.",
+      "Take one mindful breath before your next decision.",
+      "Progress can be quiet. Healing can be slow. Both still count.",
+      "Notice what your mind is carrying today, without judging it.",
+      "You are allowed to ask for support before things feel overwhelming.",
+      "Mental wellbeing begins with awareness, compassion, and connection.",
+      "Check in with yourself the way you would check in with someone you love.",
+      "You are more than your stress, your workload, or your worries.",
+      "A calm mind is built one small pause at a time.",
+      "Human connection matters. Reach out when you need support.",
+      "Your mind deserves care, not criticism.",
+      "You can be productive and still need rest.",
+      "Slow down long enough to hear what your body is saying.",
+      "Small moments of care can become strong patterns of wellbeing.",
+      "You are allowed to take up space, ask for help, and begin again.",
+      "One honest check-in with yourself can change the direction of your day.",
+      "Wellbeing is not perfection. It is learning to return to yourself.",
+      "Your emotions do not make you difficult. They make you human.",
+      "A difficult day does not mean you are failing.",
+      "Breathe in slowly. Breathe out gently. Begin again.",
+      "You do not need to carry everything alone.",
+      "Your wellbeing matters even when life feels busy.",
+      "The first step to feeling better is noticing how you feel.",
+      "It is okay to pause before responding.",
+      "Care for your mind the way you care for your responsibilities.",
+      "You are allowed to rest without guilt.",
+      "A kind thought toward yourself is still progress.",
+      "Stress is a signal. Listen gently.",
+      "You deserve support in the moments you usually stay silent.",
+      "Your mental health is part of your whole health.",
+      "Tiny moments of calm can add up.",
+      "You are not behind. You are becoming.",
+      "Let today be about one small act of care.",
+      "You can acknowledge stress without letting it define you.",
+      "Your mind needs space to breathe.",
+      "Support is strength, not weakness.",
+      "Take a moment to unclench your jaw, relax your shoulders, and breathe.",
+      "You do not have to earn kindness from yourself.",
+      "Some days, showing up is enough.",
+      "A check-in is not a diagnosis. It is a beginning.",
+      "You are allowed to feel many things at once.",
+      "Healing often starts with being honest about how you are doing.",
+      "Your pace is allowed to be different today.",
+      "You can choose calm, one breath at a time.",
+      "Mental wellness grows through small, repeated acts of care.",
+      "If today feels heavy, start with something simple.",
+      "Be gentle with the version of you that is still learning.",
+      "A supported mind makes better decisions.",
+      "You do not need to wait for crisis to care for yourself.",
+      "Reflection creates space between feeling and reacting.",
+      "Connection is part of healing.",
+      "Your inner world deserves attention too.",
+      "Pause. Notice. Breathe. Continue.",
+      "You are worthy of care before you burn out.",
+      "Every check-in is a step toward self-awareness.",
+      "You can be strong and still need support.",
+      "Mental wellbeing is built through awareness, care, and connection.",
+      "Let your next step be gentle, not perfect.",
+      "You are not your worst day.",
+      "Your mind is allowed to rest.",
+      "You deserve tools, support, and human connection.",
+      "Burnout prevention begins with listening early.",
+      "A moment of reflection can interrupt a cycle of stress.",
+      "Wellbeing is not something you chase. It is something you practice.",
+      "You can begin again at any point in the day.",
+      "Notice one thing that feels okay right now.",
+      "You are allowed to protect your peace.",
+      "Taking care of your mind helps you care for everything else.",
+      "When stress feels loud, start with one breath.",
+      "Your wellbeing is not selfish.",
+      "There is strength in naming what you feel.",
+      "You do not need perfect words to ask for help.",
+      "Small support today can prevent bigger overwhelm tomorrow.",
+      "Your emotions deserve curiosity, not judgment.",
+      "Mental clarity often begins with a pause.",
+      "You are allowed to need care and still be capable.",
+      "Today, choose one thing that supports your mind.",
+      "You are not alone in needing support.",
+      "Your mental wellness is worth making time for.",
+      "One calm moment can become the start of a better day.",
+      "Care is not only for crisis. Care is for everyday life.",
+      "You deserve to feel seen, heard, and supported.",
+      "Take a breath before you carry the next thing.",
+      "Your mind matters. Your feelings matter. You matter.",
+      "Awareness is the first step toward change.",
+      "Be patient with your healing.",
+      "It is okay to slow down and reset.",
+      "You can care deeply and still set boundaries.",
+      "Wellbeing begins with noticing what you need.",
+      "Let today’s goal be steadiness, not perfection.",
+      "Your stress is real, and so is your capacity to recover.",
+      "You are allowed to choose support over silence.",
+      "Every day is a new chance to check in with yourself.",
+      "You do not have to do mental wellness alone."
+    ];
+
+    function getDailyWellbeingMessage() {
+      const today = new Date();
+      const startOfYear = new Date(today.getFullYear(), 0, 0);
+      const diff = today - startOfYear;
+      const oneDay = 1000 * 60 * 60 * 24;
+      const dayOfYear = Math.floor(diff / oneDay);
+      const messageIndex = dayOfYear % dailyWellbeingMessages.length;
+      return dailyWellbeingMessages[messageIndex];
+    }
+
+    const tickerText = document.getElementById("dailyTickerText");
+
+    if (tickerText) {
+      tickerText.textContent = getDailyWellbeingMessage();
+    }
+  </script>
 </body>
 </html>
+
+.wellbeing-ticker {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  padding: 12px 0;
+}
+
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker-left-to-right 26s linear infinite;
+}
+
+.ticker-track span {
+  display: inline-block;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  font-weight: 750;
+  color: var(--teal);
+  letter-spacing: 0.02em;
+}
+
+@keyframes ticker-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+
