@@ -200,7 +200,7 @@
       <p class="pilot-note">
         Mind Mirror is currently in early development. Join the early access list to follow pilot updates and help shape the platform.
       </p>
-      
+
       <form
         id="early-access-form"
         name="early-access"
@@ -385,44 +385,8 @@
     const tickerText = document.getElementById("dailyTickerText");
 
     if (tickerText) {
-      tickerText.textContent = getDailyWellbeingMessage();
+      tickerText.textContent = "Mind Mirror Daily Reflection: " + getDailyWellbeingMessage();
     }
   </script>
 </body>
 </html>
-
-.wellbeing-ticker {
-  width: 100%;
-  overflow: hidden;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.78);
-  padding: 12px 0;
-}
-
-.ticker-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker-left-to-right 26s linear infinite;
-}
-
-.ticker-track span {
-  display: inline-block;
-  padding-left: 24px;
-  font-size: 0.95rem;
-  font-weight: 750;
-  color: var(--teal);
-  letter-spacing: 0.02em;
-}
-
-@keyframes ticker-left-to-right {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100vw);
-  }
-}
-
-
