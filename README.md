@@ -57,3 +57,12 @@ The homepage, metadata, employer copy and signup now welcome adults of all ages 
 The research FAQ links to Statistics Canada's 2023 summary of its 2022 survey and accurately distinguishes its highlighted 15-24 group from Mind Mirror's chosen 18-34 program focus. Research is not presented as evidence of product effectiveness.
 
 For this update, upload index.html, employers.html and README.md at the repository root. Your current larger-layout styles.css stays in place. Once Netlify publishes, confirm an adult over 34 can complete the signup without an age checkbox, check the new FAQs, and verify the submission in Netlify Forms.
+
+## Focused homepage messaging
+The homepage now speaks through lived experience: starting somewhere new, calls home, finding familiar routines, and thoughts that are hard to share with family. It does not explicitly label visitors by age or immigration category. The signup is still open to adults with no age field. Employer navigation, promotion and workplace FAQ were removed from the homepage; employers.html is retained as a standalone page.
+
+Five existing app concept previews now pair visual screens with short benefit/mechanism bullets. Conversation and journal examples reflect the new positioning. Product status and fictional-content labels remain clear. No confidentiality, therapeutic outcome or live AI functionality claims were added.
+
+Structural reference reviewed: https://pulsia.app/ (brief benefit statements alongside app visuals and a repeated waitlist CTA). The site uses original Mind Mirror copy and existing HTML/CSS previews, not copied Pulsia assets.
+
+Upload index.html, styles.css and README.md from the focused-homepage ZIP at the repository root. Confirm Netlify deploys, check desktop/mobile layout and all five preview buttons, and submit a signup test on the live site.
