@@ -43,3 +43,10 @@ The product illustration is a clearly labelled static concept. It does not colle
 The original script stored emails in localStorage before the server confirmed success and blocked retries. That script was removed. The form now uses Netlify's native POST flow, without locally claiming successful submission. The thank-you page is reached through the form action when hosting processes the submission.
 
 The design uses optional Google Fonts with system fallbacks. All other assets are local. No analytics, Meta pixel, ad campaign, automatic email sequence, payment flow or backend was added. This package does not publish changes to GitHub or Netlify by itself.
+
+## Refreshed prototype preview
+The homepage now includes five screen concepts based on MirrorMind_PoC_Prototype_UpdatedVersion.pptx: daily home, guided reflection, journal, patterns, and preferences. The designs use the current green/cream palette and editable HTML/CSS. No image uploads or additional dependencies are needed. Screen switching uses a small inline script; all phone contents remain illustrative.
+
+The previous prototype's clinical score, therapist availability, chronic-illness alerts and clinical screening claims were not carried into the public preview. All names, journal entries and check-ins in the new screens are fictional. The actual account, AI, storage, privacy and clinical capabilities have not been implemented by this website update.
+
+Upload index.html, styles.css and README.md to the repository root to apply this revision. The full ZIP also contains the unchanged employer page, confirmation page and original logo. Test all five screen selectors at desktop and phone widths, then test the existing Netlify signup flow on the deployed site.
