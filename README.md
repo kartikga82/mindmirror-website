@@ -3,7 +3,7 @@
 Static HTML/CSS update based on Empowered's feedback. No build command or installation is needed. The original README identifies Netlify as the host, connected to this GitHub repository. Confirm that connection in Netlify before relying on an automatic deployment.
 
 ## Files
-- index.html — Canadian adults aged 18–34, one primary launch-community CTA.
+- index.html — Adults across Canada, one primary launch-community CTA; dedicated 18–34 programs planned.
 - employers.html — separate workplace pilot page for SMEs in tech, healthcare, and finance.
 - styles.css — responsive shared design.
 - thank-you.html — signup confirmation and next steps.
@@ -29,7 +29,7 @@ Static HTML/CSS update based on Empowered's feedback. No build command or instal
 - Confirm your actual production domain in Netlify. The source does not change DNS or domain settings.
 
 ## Research and launch plan
-1. Interview 50–60 Canadian adults aged 18–34 across a deliberately chosen initial segment. Ask about a recent real example, what they tried, where it fell short, and what they paid for. Record exact phrases with permission.
+1. Interview 50–60 Canadian adults across clearly defined age segments, including the planned 18–34 program audience. Ask about a recent real example, what they tried, where it fell short, and what they paid for. Record exact phrases with permission.
 2. Interview SME decision-makers separately: problem owner, current spending, purchase approval, privacy requirements, and criteria for a paid pilot.
 3. Replace the provisional problem statements on the homepage with recurring interview language. Current copy is a hypothesis, not research findings or quotations from customers.
 4. Offer optional interviews and prototype feedback with clear schedules and expectations. Track consent and honour withdrawal requests.
@@ -50,3 +50,10 @@ The homepage now includes five screen concepts based on MirrorMind_PoC_Prototype
 The previous prototype's clinical score, therapist availability, chronic-illness alerts and clinical screening claims were not carried into the public preview. All names, journal entries and check-ins in the new screens are fictional. The actual account, AI, storage, privacy and clinical capabilities have not been implemented by this website update.
 
 Upload index.html, styles.css and README.md to the repository root to apply this revision. The full ZIP also contains the unchanged employer page, confirmation page and original logo. Test all five screen selectors at desktop and phone widths, then test the existing Netlify signup flow on the deployed site.
+
+## Inclusive adult audience update
+The homepage, metadata, employer copy and signup now welcome adults of all ages across Canada. The mandatory 18-34 eligibility checkbox has been removed; required email consent remains. No age field is collected. Dedicated programs for ages 18-34 are described as planned, since the product is in development.
+
+The research FAQ links to Statistics Canada's 2023 summary of its 2022 survey and accurately distinguishes its highlighted 15-24 group from Mind Mirror's chosen 18-34 program focus. Research is not presented as evidence of product effectiveness.
+
+For this update, upload index.html, employers.html and README.md at the repository root. Your current larger-layout styles.css stays in place. Once Netlify publishes, confirm an adult over 34 can complete the signup without an age checkbox, check the new FAQs, and verify the submission in Netlify Forms.
